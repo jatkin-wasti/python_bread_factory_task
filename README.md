@@ -91,7 +91,7 @@ As a user, I can user the run factory with water and flour and get naan.
 
 # Solution
 ## Creating our test file
-- First we need to make file for testing, which we'll call ```test_factory.py```
+- First we need to make our file for testing, which we'll call ```test_factory.py```
 - In that file we'll import the necessary testing modules as well as the class to be tested (This hasn't been created
  yet so if you're getting an error, this is okay)
 ```
@@ -157,6 +157,11 @@ class NaanFactory:
         else:  # If not then the Naan cannot be made
             return 'this attempt to make naan has failed'
 ```
+## Running the test file again
+- Now that we've made our class to be tested, we can run our tests again to see if they pass
+- We can do this by running the file normally, or by inputting ```pytest``` for a general view of results or
+ ```pytest -v``` if we want a more detailed exploration
+ - These tests should all pass now! That means we can focus on making a run file to actually make some Naan
 ## Creating our run file
 - Now we'll create a file that can run methods inherited from the NaanFactory class
 ```
@@ -203,5 +208,5 @@ run_factory('water', 'flour')
 run_factory('flour', 'water')
 # Testing that the function works with incorrect dough ingredients
 run_factory('bananas', 'maple syrup')
-
 ```
+
